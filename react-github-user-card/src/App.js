@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Card from './Card'
+
 import axios from 'axios'
 import './App.css';
 
@@ -45,10 +47,10 @@ class App extends Component {
   render(){
     return(
       <div>
-        <p>{this.state.user.login}</p>
+        <Card user={this.state.user} />
         {this.state.followersList.map(item => {
           return(
-          <p>{item.login}</p>
+          <Card user={item} />
           )
         })}
       </div>
