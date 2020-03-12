@@ -45,9 +45,14 @@ class App extends Component {
   }
 
   render(){
+
+    const mystyle = {
+      backgroundColor: "DodgerBlue"
+    };
+
     return(
       <div>
-        <Card user={this.state.user} />
+        <Card styles={mystyle} user={this.state.user} />
         {this.state.followersList.map(item => {
           return(
           <Card user={item} />
